@@ -54,6 +54,3 @@ if __name__ == '__main__':
      'hash': hashes,
     })
     df.to_csv(os.path.join(args.output_directory, args.filename),header=None, index=False)
-
-
-
