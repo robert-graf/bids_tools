@@ -1,10 +1,7 @@
 
 from pathlib import Path
-import json
 import argparse
-import re
 import os
-import csv
 import sys
 import hashlib
 import pandas as pd
@@ -19,24 +16,20 @@ parser.add_argument('-f', '--filename', type=str, default="dataset_description.c
 
 args = parser.parse_args()
 data_root = Path(args.input_directory)
-
-
 file_names = []
 hashes = []
 
 if __name__ == '__main__':
 
     dirs = sorted(list(data_root.glob('*')))
-    print(f'Number of directories: {len(dirs)}')
     i = 0
     for dir in dirs:  # iterate over subdirs
         files = sorted(list(dir.rglob('*.nii.gz')))  # within raw data dir
         if len(files) > 0:  # skip root_dirs and empty dirs
             for file in files:
                 print(f'{os.path.join(data_root, dir, file)}')
-                # print(file) 
-                # BUF_SIZE is totally arbitrary, change for your app!
-                BUF_SIZE = 65536  # lets read stuff in 64kb chunks!
+
+                BUF_SIZE = 65536 # BUF_SIZE is totally arbitrary
 
                 md5 = hashlib.md5()
                 sha1 = hashlib.sha1()
@@ -57,14 +50,10 @@ if __name__ == '__main__':
                 hashes.append(sha1.hexdigest())
     
     # zip file names and hashes
-
     df = pd.DataFrame(
     {'name': file_names,
      'hash': hashes,
     })
-    #dictionary = dict(zip(file_names, hashes))
-
-    #df = pd.DataFrame.from_dict(dict(zip(file_names, hashes)), orient='index')
     df.to_csv(os.path.join(args.output_directory, args.filename),header=None, index=False)
 
 
