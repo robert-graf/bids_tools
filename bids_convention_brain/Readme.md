@@ -117,14 +117,26 @@ The brain database has been curated by various PhD students at the TUM lab. It c
 │   │   │   ├── sub-123456_ses-20220101_T1w.json
 │   │   │   ├── sub-123456_ses-20220101_T1w.nii.gz
 │   │   │   ├── sub-123456_ses-20220101_T2w.json
-│   │   │   └── sub-123456_ses-20220101_T2w.nii.gz
+│   │   │   ├── sub-123456_ses-20220101_T2w.nii.gz
+│   │   │   ├── sub-123456_ses-20220101_FLAIR.json
+│   │   │   ├── sub-123456_ses-20220101_FLAIR.nii.gz
+│   │   │   ├── sub-123456_ses-20220101_ce-Gd_T1w.json
+│   │   │   ├── sub-123456_ses-20220101_ce-Gd_T1w.nii.gz
+│   │   │   ├── sub-123456_ses-20220101_DIR.json (DIR BIDS convention??)
+│   │   │   └── sub-123456_ses-20220101_DIR.nii.gz (DIR BIDS convention??)
 │   │   └── sub-123456_ses-20220101_scans.tsv
 │   └── ses-20220202
 │       ├── anat
 │       │   ├── sub-123456_ses-20220202_T1w.json
 │       │   ├── sub-123456_ses-20220202_T1w.nii.gz
 │       │   ├── sub-123456_ses-20220202_T2w.json
-│       │   └── sub-123456_ses-20220202_T2w.nii.gz
+│       │   ├── sub-123456_ses-20220202_T2w.nii.gz
+│       │   ├── sub-123456_ses-20220202_FLAIR.json
+│       │   ├── sub-123456_ses-20220202_FLAIR.nii.gz
+│       │   ├── sub-123456_ses-20220202_ce-Gd_T1w.json
+│       │   ├── sub-123456_ses-20220202_ce-Gd_T1w.nii.gz
+│       │   ├── sub-123456_ses-20220202_DIR.json (DIR BIDS convention??)
+│       │   └── sub-123456_ses-20220202_DIR.nii.gz (DIR BIDS convention??)
 │       └── sub-123456_ses-20220202_scans.tsv
 
 
